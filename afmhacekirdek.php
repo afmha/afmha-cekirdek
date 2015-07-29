@@ -1,28 +1,30 @@
 <?php
-
-	function t ($s1,$s2){
-		echo $s1+$s2;
-	}
-	function c ($s1,$s2){
-		echo $s1-$s2;
-	}
-	function cc ($s1,$s2){
-		echo $s1*$s2;
-	}
-	function b ($s1,$s2){
-		echo $s1/$s2;
-	}
-	function m ($s1,$s2){
-		echo $s1%$s2;
-	}
-	function ust ($x,$y){
-		$z = 1;
-		$l = $x;
-		while ($z < $y){
-			$z = $z + 1;
-			$x = $x * $l;
+	
+	class hesapmakinesi{
+		function t ($s1,$s2){
+			echo $s1+$s2;
 		}
-		echo $x;
+		function c ($s1,$s2){
+			echo $s1-$s2;
+		}
+		function cc ($s1,$s2){
+			echo $s1*$s2;
+		}
+		function b ($s1,$s2){
+			echo $s1/$s2;
+		}
+		function m ($s1,$s2){
+			echo $s1%$s2;
+		}
+		function ust ($x,$y){
+			$z = 1;
+			$l = $x;
+			while ($z < $y){
+				$z = $z + 1;
+				$x = $x * $l;
+			}
+			echo $x;
+		}
 	}
 	function yaz ($de){
 		echo $yaz;
@@ -33,26 +35,28 @@
 	function s_baslik ($y){
 		echo '<title>'.$y.'</title>';
 	}
-	function dosya_cagir ($k){
-		include($k);
-	}
-	function dosya_cagir2 ($k){
-		include_once($k);
-	}
-	function dosya_cagir3 ($k){
-		require($k);
-	}
-	function dosya_cagir4 ($k){
-		require_once($k);
+	class dosyalar{
+		function dosya_cagir ($k){
+			include($k);
+		}
+		function dosya_cagir2 ($k){
+			include_once($k);
+		}
+		function dosya_cagir3 ($k){
+			require($k);
+		}
+		function dosya_cagir4 ($k){
+			require_once($k);
+		}
+		function jsdosya($x){
+		echo '<script type="text/javascript" src="'.$x.'" language="javascript"></script>';
+		}
+		function sdosya($t,$x,$t2){
+			echo '<script type="'.$t.'" src="'.$x.'" language="'.$t2.'"></script>';
+		}
 	}
 	function afmha(){
 		phpinfo();
-	}
-	function jsdosya($x){
-		echo '<script type="text/javascript" src="'.$x.'" language="javascript"></script>';
-	}
-	function sdosya($t,$x,$t2){
-		echo '<script type="'.$t.'" src="'.$x.'" language="'.$t2.'"></script>';
 	}
 	function engelle($z){
 		if (!defined('CONFIG_CLASS_INCLUDED')) {
@@ -69,29 +73,31 @@
 	function tarih(){
 		echo date('d.m.Y H:i:s');
 	}
-	function e_slash($d){
-		$e_slash = addslashes($d);
-		global $e_slash;
-	}
-	function k_slash($d){
-		$k_slash = stripslashes($d);
-		global $k_slash;
-	}
-	function tumubuyuk($tb){
-		$tumb = strtoupper($tb);
-		global $tumb;
-	}
-	function tumukucuk($tk){
-		$tumk = strtolower($tk);
-		global $tumk;
-	}
-	function basbuyuk($bb){
-		$basbuyuk = strtoupper($bb);
-		global $basbuyuk;
-	}
-	function tumubasbuyuk($tbb){
-		$tumbb = strtolower($tbb);
-		global $tumubasbuyuk;
+	class yazi_islemler{
+		function e_slash($d){
+			$e_slash = addslashes($d);
+			global $e_slash;
+		}
+		function k_slash($d){
+			$k_slash = stripslashes($d);
+			global $k_slash;
+		}
+		function tumubuyuk($tb){
+			$tumb = strtoupper($tb);
+			global $tumb;
+		}
+		function tumukucuk($tk){
+			$tumk = strtolower($tk);
+			global $tumk;
+		}
+		function basbuyuk($bb){
+			$basbuyuk = strtoupper($bb);
+			global $basbuyuk;
+		}
+		function tumubasbuyuk($tbb){
+			$tumbb = strtolower($tbb);
+			global $tumubasbuyuk;
+		}
 	}
 	
 
