@@ -100,6 +100,9 @@
 		}
 	}
 	
+	$hm = new hesapmakinesi();
+	$d = new dosyalar();
+	$yi = new yazi_islemler();
 
 	/*
 	t();				=> Toplama İşlemi t(5,5);
