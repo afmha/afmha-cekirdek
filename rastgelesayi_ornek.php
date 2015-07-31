@@ -4,8 +4,11 @@
 
   if($_POST){
   
-    $sayi1 = $_POST['sayi1'];
-    $sayi2 = $_POST['sayi2'];
+    $sayi1 = @$_POST['sayi1'];
+    $sayi2 = @$_POST['sayi2'];
+    
+    if(empty($sayi1)){ $sayi1 = 1; }
+    if(empty($sayi2)){ $sayi2 = 5; }
     
     rastgele($sayi1,$sayi2);
     
