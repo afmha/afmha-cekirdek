@@ -99,7 +99,42 @@
 			global $tumubasbuyuk;
 		}
 	}
+	class cookie{
+		function olustur($a,$b,$c=time() + (60*60*24)){
+			setcookie($a,$b,$c);
+			global $cookie_afmha_cikti;
+			if(isset($_COOKIE[$a])){
+				$cookie_afmha_cikti = "İşlem tamam.";
+			}
+			else
+			{
+				$cookie_afmha_cikti = "İşlem sırasında bir hata meydana geldi.";
+			}
+		}
+		function sil($a,$b,$c=time() - 3600){
+			setcookie($a,$b,$c);
+			global $cookie_afmha_cikti;
+			if(isset($_COOKIE[$a])){
+				$cookie_afmha_cikti = "İşlem sırasında bir hata meydana geldi..";
+			}
+			else
+			{
+				$cookie_afmha_cikti = "İşlem tamam.";
+			}
+		}
+		function kullan($a){
+			global $cookie_afmha_cikti;
+			if(isset($_COOKIE[$a])){
+				$cookie_afmha = $_COOKIE[$a];
+			}
+			else
+			{
+				$cookie_afmha_cikti = "Cookie yok.";
+			}
+		}
+	}
 	
+	$co = new cookie();
 	$hm = new hesapmakinesi();
 	$d = new dosyalar();
 	$yi = new yazi_islemler();
