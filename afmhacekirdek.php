@@ -166,6 +166,9 @@
 	tumukucuk();		=> Yazıların tümünü küçük harf ile yazar.
 	basbuyuk();			=> Yazıların sadece başındaki harfi büyük yapar.
 	tumubasbuyuk();		=> Tüm yazıların sadece kelime başlarını büyük yapar.
+	$co->ekle();		=> Cookie(Çerez) eklemeye yarar.
+	$co->kaldir();		=> Cookie(Çerez) silmeye yarar.
+	$co->kullan();		=> Cookie(Çerez) kullanmaya yarar.
 	*/
 
 ?>
