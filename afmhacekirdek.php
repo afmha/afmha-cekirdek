@@ -100,8 +100,11 @@
 		}
 	}
 	class cookie{
-		function olustur($a,$b,$c=time() + (60*60*24)){
-			setcookie($a,$b,$c);
+		function olustur($a,$b,$c=""){
+			if($c == ""){
+				setcookie($a,$b,time()+60*60*24);
+			}else{
+			setcookie($a,$b,$c);}
 			global $cookie_afmha_cikti;
 			if(isset($_COOKIE[$a])){
 				$cookie_afmha_cikti = "İşlem tamam.";
@@ -111,8 +114,11 @@
 				$cookie_afmha_cikti = "İşlem sırasında bir hata meydana geldi.";
 			}
 		}
-		function sil($a,$b,$c=time() - 3600){
-			setcookie($a,$b,$c);
+		function sil($a,$b,$c=" "){
+			if($c == " "){
+				setcookie($a,$b,'time() - 3600');
+			}else{
+			setcookie($a,$b,$c);}
 			global $cookie_afmha_cikti;
 			if(isset($_COOKIE[$a])){
 				$cookie_afmha_cikti = "İşlem sırasında bir hata meydana geldi..";
@@ -125,6 +131,7 @@
 		function kullan($a){
 			global $cookie_afmha_cikti;
 			if(isset($_COOKIE[$a])){
+				global $cookie_afmha;
 				$cookie_afmha = $_COOKIE[$a];
 			}
 			else
