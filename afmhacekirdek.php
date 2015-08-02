@@ -140,6 +140,13 @@
 			}
 		}
 	}
+	function ip(){
+		
+		global $afmha_ip;
+		
+		$afmha_ip = $_SERVER['REMOTE_ADDR'];
+		
+	}
 	
 	$co = new cookie();
 	$hm = new hesapmakinesi();
