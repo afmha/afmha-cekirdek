@@ -147,6 +147,15 @@
 		$afmha_ip = $_SERVER['REMOTE_ADDR'];
 		
 	}
+	function bakim($a="Bakımdayız",$b="Sitemiz şuan da bakımda"){
+		echo '
+			<div id="bakim" style="width: 100%; background-color: #ff5656; color: red; border: 2.5px dotted red;">
+				<b>'.$a.'</b>
+				<br><br>
+				<span>'.$b.'</span>
+			</div>
+		';
+	}
 	
 	$co = new cookie();
 	$hm = new hesapmakinesi();
@@ -183,6 +192,7 @@
 	$co->ekle();		=> Cookie(Çerez) eklemeye yarar.
 	$co->kaldir();		=> Cookie(Çerez) silmeye yarar.
 	$co->kullan();		=> Cookie(Çerez) kullanmaya yarar.
+	$bakim();		=> Bakım tasarımı eklemeye yarar.
 	*/
 
 ?>
