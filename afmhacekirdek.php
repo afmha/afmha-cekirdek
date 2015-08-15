@@ -19,9 +19,18 @@
 		function ust ($x,$y){
 			$z = 1;
 			$l = $x;
-			while ($z < $y){
-				$z = $z + 1;
-				$x = $x * $l;
+			if($x = 10){
+				while ($z > $y){
+					$y = $y+1;
+					$x = $x / 10;
+				}
+			}
+			else
+			{
+				while ($z < $y){
+					$z = $z + 1;
+					$x = $x * $l;
+				}
 			}
 			echo $x;
 		}
