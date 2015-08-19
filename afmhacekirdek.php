@@ -1,6 +1,10 @@
 <?php
 	
 	class hesapmakinesi{
+		
+		public $deger;
+		public $deger2;
+		
 		function t ($s1,$s2){
 			echo $s1+$s2;
 		}
@@ -33,6 +37,14 @@
 				}
 			}
 			echo $x;
+		}
+		public function yuzde_al($a,$b){
+			$this->deger = $a;
+			$this->deger2 = $b;
+			$c = 100;
+			$d = $this->deger2 * $c;
+			$e = $d/$this->deger;
+			return $e;
 		}
 	}
 	function yaz ($de){
