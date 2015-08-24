@@ -177,11 +177,44 @@
 			</div>
 		';
 	}
+	class dosya_islemleri(){
+		function dosya_olustur($a="deneme.txt",$b="0777"){
+			$olustur = mkdir($a,$b);
+			if($olustur){
+				return "Dosya Oluşturuldu.";
+			}else{
+				return "Dosya Oluşturulamadı.";
+			}
+		}
+		function dosya_sil($a="deneme.txt"){
+			$sil = unlink($a);
+			if($sil){
+				return "Dosya silindi.";
+			}else{
+				return "Dosya silinemedi.";
+			}
+		}
+		function dosya_ismi_degistir($a="deneme.txt",$b="deneme.html"){
+			$degistir = rename($a,$b);
+			if($degistir){
+				return "Dosya ismi değiştirildi.";
+			}else{
+				return "Dosya ismi değiştirilemedi.";
+			}
+		}
+		function dosya_icindekiler($a="anasayfa"){
+			$dosya = opendir($a);
+			while($veriler = readdir($dosya)){
+				echo $veriler.'<br>';
+			}
+		}
+	}
 	
 	$co = new cookie();
 	$hm = new hesapmakinesi();
 	$d = new dosyalar();
 	$yi = new yazi_islemler();
+	$di = new dosya_islemleri();
 
 	/*
 	t();				=> Toplama İşlemi t(5,5);
