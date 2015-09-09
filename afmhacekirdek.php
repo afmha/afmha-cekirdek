@@ -178,7 +178,7 @@
 			</div>
 		';
 	}
-	class dosya_islemleri(){
+	class dosya_islemleri{
 		function dosya_olustur($a="deneme.txt",$b="0777"){
 			$olustur = mkdir($a,$b);
 			if($olustur){
