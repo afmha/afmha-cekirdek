@@ -125,7 +125,8 @@
 			if($c == ""){
 				setcookie($a,$b,time()+60*60*24);
 			}else{
-			setcookie($a,$b,$c);}
+				setcookie($a,$b,$c);
+			}
 			global $cookie_afmha_cikti;
 			if(isset($_COOKIE[$a])){
 				$cookie_afmha_cikti = "İşlem tamam.";
