@@ -138,7 +138,7 @@
 		}
 		function sil($a,$b,$c=" "){
 			if($c == " "){
-				setcookie($a,$b,'time() - 3600');
+				setcookie($a,$b,time()-3600);
 			}else{
 			setcookie($a,$b,$c);}
 			global $cookie_afmha_cikti;
