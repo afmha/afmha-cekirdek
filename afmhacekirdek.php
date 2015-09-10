@@ -1,5 +1,9 @@
 <?php
 	
+	define("AFMHA_SURUM_NUMARASI","0.46");
+	define("AFMHA_SURUM_ISMI","");
+	define("AFMHA_SURUM_TARIHI","10.09.2015 17.15");
+	
 	class afmha{
 	
 		public $veri;
@@ -64,7 +68,7 @@
 		}
 	}
 	function yaz ($de){
-		echo $yaz;
+		echo $de;
 	}
 	function yaz_r ($x){
 		print_r($x);
@@ -225,6 +229,93 @@
 				echo $veriler.'<br>';
 			}
 		}
+	}
+	
+	function afmha_bilgi(){
+			
+			echo '
+			<div style="width: 700px;border: 1px solid #eee;background-color: #222;color: #fff;position: relative;margin: auto;text-shadow: 0.25px 0.25px 0.25px #000;">
+				<h1>Afmha Çekirdek</h1>
+				<hr>
+				<ul>
+					<li>Sürüm: '.AFMHA_SURUM_NUMARASI.'</li>
+					<li>Sürüm İsmi: '.AFMHA_SURUM_ISMI.'</li>
+					<li>Sürüm Tarihi: '.AFMHA_SURUM_TARIHI.'</li>
+				</ul>
+			</div>
+			';
+		
+	}
+	
+	function konsol(){
+		echo '
+	<style type="text/css">
+		#konsol{
+			padding: 5px;
+			background-color: #000;
+			color: #fff;
+			width: 800px;
+			height: 500px;
+			position: relative;
+			margin: auto;
+		}
+		#veriler{
+			width: 800px;
+			height: 450px;
+			overflow: scroll;
+			overflow-x: hidden;
+		}
+		#komutgir{
+			border: 1px solid #fff;
+			background-color: #000;
+			width: 700px;
+			padding: 3px;
+			color: #fff;
+		}
+	</style>
+	
+	<form action="" method="POST">
+	
+		<div id="konsol">
+		<div id="veriler">
+			';
+				
+				if($_POST){
+				
+					if($_POST['komut']){
+						
+						switch($_POST['komut']){
+							
+							case "php_bilgi":
+							
+								phpinfo();
+							
+							break;
+							
+							case "afmha_çekirdek_bilgi":
+							
+								afmha_bilgi();
+							
+							break;
+							
+							case "zaman":
+							
+								echo date("H:i:s j F Y")." haftanın ".date("w").". günü";
+							
+							break;
+							
+						}
+						echo $_POST['komut'];
+					}
+				
+				}
+		echo '</div>
+		<hr>
+		<input type="text" name="komut" id="komutgir"><input type="submit" value="yolla">
+		</div>
+	
+	</form>
+	';
 	}
 	
 	$co = new cookie();
