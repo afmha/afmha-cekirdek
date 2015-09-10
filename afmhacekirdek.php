@@ -1,5 +1,21 @@
 <?php
 	
+	class afmha{
+	
+		public $veri;
+		
+		public function vekle($a){
+			$this->veri = $a;
+		}
+		public function vsil(){
+			$this->veri = NULL;
+		}
+		function durdur(){
+			exit;
+		}
+		
+	}
+	
 	class hesapmakinesi{
 		
 		public $deger;
