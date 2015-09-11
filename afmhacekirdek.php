@@ -1,8 +1,8 @@
 <?php
 	
-	define("AFMHA_SURUM_NUMARASI","0.46");
+	define("AFMHA_SURUM_NUMARASI","0.49");
 	define("AFMHA_SURUM_ISMI","");
-	define("AFMHA_SURUM_TARIHI","10.09.2015 17.15");
+	define("AFMHA_SURUM_TARIHI","12.09.2015 01.10");
 	
 	class afmha{
 	
@@ -319,6 +319,20 @@
 	}
 	function a_yaz($a='echo="Hata";'){
 		eval($a);
+	}
+	function b64($a=""){
+	
+		global $afmha_sifrelenen_veri;
+		$afmha_sifrelenen_veri = base64_encode($a);
+		return $afmha_sifrelenen_veri;
+	
+	}
+	function b64d($a=""){
+		
+		global $afmha_sifre_ciktisi;
+		$afmha_sifre_ciktisi = base64_decode($a);
+		return $afmha_sifre_ciktisi;
+		
 	}
 	
 	$co = new cookie();
