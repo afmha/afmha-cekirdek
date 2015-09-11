@@ -1,8 +1,8 @@
 <?php
 	
-	define("AFMHA_SURUM_NUMARASI","0.49");
+	define("AFMHA_SURUM_NUMARASI","0.51");
 	define("AFMHA_SURUM_ISMI","");
-	define("AFMHA_SURUM_TARIHI","12.09.2015 01.10");
+	define("AFMHA_SURUM_TARIHI","12.09.2015 01.32");
 	
 	class afmha{
 	
@@ -334,12 +334,33 @@
 		return $afmha_sifre_ciktisi;
 		
 	}
+	class zaman{
+		public $baslangic;
+		public $bitis;
+		public $izin;
+		public function baslangic($a=0){
+			$this->baslangic = microtime();
+			if($a == 1){
+				return $this->baslangic." zamanında başlandı.";
+			}
+			$this->izin = 1;
+		}
+		public function bitis(){
+			if($this->izin == 1){
+				$this->bitis = microtime();
+				return abs($this->baslangic-$this->bitis);
+			}else{
+				return "Hesaplama izini sistem tarafından verilmemiş.";
+			}
+		}
+	}
 	
 	$co = new cookie();
 	$hm = new hesapmakinesi();
 	$d = new dosyalar();
 	$yi = new yazi_islemler();
 	$di = new dosya_islemleri();
+	$z = new zaman();
 
 	/*
 	t();				=> Toplama İşlemi t(5,5);
