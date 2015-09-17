@@ -1,8 +1,8 @@
 <?php
 	
-	define("AFMHA_SURUM_NUMARASI","0.51");
+	define("AFMHA_SURUM_NUMARASI","0.52");
 	define("AFMHA_SURUM_ISMI","");
-	define("AFMHA_SURUM_TARIHI","12.09.2015 01.32");
+	define("AFMHA_SURUM_TARIHI","17.09.2015 20.59");
 	
 	class afmha{
 	
@@ -245,6 +245,46 @@
 			</div>
 			';
 		
+	}
+	
+	function afmhasifrele($a){
+		global $afmhasifre;
+		$afmhasifre = strlen($a);
+		$afmhasifre .= substr_count($a,"a");
+		$afmhasifre .= substr_count($a,"b");
+		$afmhasifre .= substr_count($a,"c");
+		$afmhasifre .= substr_count($a,"ç");
+		$afmhasifre .= substr_count($a,"d");
+		$afmhasifre .= substr_count($a,"e");
+		$afmhasifre .= substr_count($a,"f");
+		$afmhasifre .= substr_count($a,"g");
+		$afmhasifre .= substr_count($a,"ğ");
+		$afmhasifre .= substr_count($a,"ı");
+		$afmhasifre .= substr_count($a,"i");
+		$afmhasifre .= substr_count($a,"j");
+		$afmhasifre .= substr_count($a,"k");
+		$afmhasifre .= substr_count($a,"l");
+		$afmhasifre .= substr_count($a,"m");
+		$afmhasifre .= substr_count($a,"n");
+		$afmhasifre .= substr_count($a,"o");
+		$afmhasifre .= substr_count($a,"ö");
+		$afmhasifre .= substr_count($a,"p");
+		$afmhasifre .= substr_count($a,"r");
+		$afmhasifre .= substr_count($a,"s");
+		$afmhasifre .= substr_count($a,"ş");
+		$afmhasifre .= substr_count($a,"t");
+		$afmhasifre .= substr_count($a,"u");
+		$afmhasifre .= substr_count($a,"ü");
+		$afmhasifre .= substr_count($a,"v");
+		$afmhasifre .= substr_count($a,"y");
+		$afmhasifre .= substr_count($a,"z");
+		$afmhasifre .= substr_count($a,"x");
+		$afmhasifre .= substr_count($a,"q");
+		$afmhasifre .= substr_count($a,"w");
+		$afmhasifre .= substr($a, 0, 1);
+		$sifre2 = substr($sifre, 3, 3);
+		$afmhasifre .= $sifre2;
+		return $sifre;
 	}
 	
 	function konsol(){
