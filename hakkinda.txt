@@ -1,0 +1,25 @@
+Afmha Çekirdek Nedir?
+
+Afmha Çekirdek aslında PHP üzerinde fonksiyonların toplandığı bir yazılımdır.PHP dilinde komutları daha kolay, hızlı ve zorlanmadan yazmak için hazırlanmış.Yeni başlayan kullanıcıları hedefleyen basit bir yazılım bütünüdür.
+
+PHP komutlarını fonksiyonlar içine gömerek yeni başlayan kullanıcılar için kolaylık sağlamayı düşündük.
+
+Örnek bir kullanım:
+
+Bir toplama işlemi yapmak için:
+
+$x = 5;
+
+$y = 4;
+
+echo = $x+$y;
+Komutlarını daha sade hale getirip bir fonksiyonda birleştirdik ve şu hali aldı:
+
+t(5,4);
+İki komut dizisinde de ekran çıktısı aynı şey olacak yani 9 olacak.
+
+biz t fonksiyonu içinde bu toplama komutlarını zaten birleştirdik ve size daha hızlı bir yazım sağlamayı hedefledik.
+
+Afmha Çekirdek Nerede İşimize Yarayabilir?
+
+Afmha Çekirdek yazılımı sizin komutları daha hızlı yazmak ve zaman kaybınızı önler.Yeni başlayan kullanıcılar için anlaşılması kolay bir kullanımı vardır.
