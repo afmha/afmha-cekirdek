@@ -96,6 +96,17 @@
 			echo '<script type="'.$t.'" src="'.$x.'" language="'.$t2.'"></script>';
 		}
 	}
+	function dosya_cagir($isim,$kontrol=0,$cikti=""){
+		if($kontrol == 1){
+			if(file_exists($isim)){
+				include($isim);
+			}else{
+				echo $cikti;
+			}
+		}else{
+		include($isim);
+		}
+	}
 	function afmha(){
 		phpinfo();
 	}
