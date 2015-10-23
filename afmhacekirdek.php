@@ -1,8 +1,8 @@
 <?php
 	
-	define("AFMHA_SURUM_NUMARASI","0.52");
+	define("AFMHA_SURUM_NUMARASI","0.54");
 	define("AFMHA_SURUM_ISMI","");
-	define("AFMHA_SURUM_TARIHI","17.09.2015 20.59");
+	define("AFMHA_SURUM_TARIHI","23.10.2015 17.23");
 	
 	class afmha{
 	
@@ -404,6 +404,22 @@
 				return "Hesaplama izini sistem tarafından verilmemiş.";
 			}
 		}
+	}
+	function ciz($a=1,$b=1,$c="000000"){
+		$cizilecek = '
+			<style type="text/css">
+				#div'.$a.$b.$c.'{
+					position: fixed;
+					top: '.$a.';
+					left: '.$b.';
+					background-color: #'.$c.';
+					width: 1px;
+					height: 1px;
+				}
+			</style>
+			<div id="div'.$a.$b.$c.'"></div>
+		';
+		echo $cizilecek;
 	}
 	
 	$co = new cookie();
